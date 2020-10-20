@@ -19,7 +19,7 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        .target( name: "DCFoundation", path: "dcfoundation", dependencies: []),
-        .testTarget( name: "TestApp", path: "dcfoundation", dependencies: ["DCFoundation"]),
+        .target( name: "DCFoundation", dependencies: [], path: "dcfoundation"),
+        .testTarget( name: "TestApp", dependencies: ["DCFoundation"], path: "dcfoundation"),
     ]
 )
